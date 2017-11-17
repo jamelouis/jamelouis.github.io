@@ -1,0 +1,133 @@
+---
+---
+@import "reset"
+//
+// Variables
+//
+
+$spring: #adc66d;
+$summer: #5d97f3;
+$autumn: #d75f2b;
+$winter: #e2e2eb;
+$white: #fbfbfb;
+$black: #0d132e;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $winter;
+	font-family: "Josefin Sans";
+	font-size: 100%;
+}
+
+.wrapper {
+	max-width: 80vw;
+	margin: 0 auto;
+	height: 100vh;
+	padding: 0px 16px 0px 16px;
+}
+
+header {
+	border-bottom: 1px solid #555;
+	padding-bottom: 10px;
+
+	& a{
+		padding-right: 20px;
+	}
+
+	& a:last-of-type {
+		padding-right: 0px;
+	}
+}
+
+footer {
+	border-top: 1px solid #555;
+	padding-top: 10px;
+	text-align: center;
+
+	& a{
+		padding-right: 20px;
+	}
+
+	& a:last-of-type {
+		padding-right: 20px;
+	}
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+a {
+	color: $summer;
+	text-decoration: none;
+	font-size: 1.5em;
+	display: inline-block;
+
+	&:hover, &:active{
+		color: $autumn;
+	}
+
+	&.websitename, &.websitename:hover{
+		color: $spring;
+		text-transform: uppercase;
+	}
+}
+
+p {
+	padding-bottom: 20px;
+}
+//
+// Layout
+//
+
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-rows: 1fr 8fr 1fr;
+	grid-template-areas:
+		"header"
+		"content"
+		"footer";
+}
+
+header {
+	grid-area: header;
+	align-self: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	grid-area: content;
+	display: grid;
+	grid-template-rows: 4fr 2fr;
+	grid-gap: 20px;
+	grid-template-areas:
+		"moment"
+		"info";
+}
+
+.info {
+	grid-area: info;
+	align-self: center;
+	text-align: center;
+}
+
+.moment {
+	grid-area: moment;
+}
+
+footer {
+	grid-area: footer;
+	align-self: center;
+}
+
+//
+// Import
+//
+@import "svg-icons"
