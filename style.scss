@@ -17,7 +17,7 @@ $black: #0d132e;
 }
 
 body {
-	background-color: $winter;
+	background-color: white;
 	font-family: "Josefin Sans";
 	font-size: 100%;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 header {
-	border-bottom: 1px solid #555;
+	border-bottom: 1px solid $winter;
 	padding-bottom: 10px;
 
 	& a{
@@ -43,8 +43,7 @@ header {
 }
 
 footer {
-	border-top: 1px solid #555;
-	padding-top: 10px;
+	border-top: 1px solid $winter;
 	text-align: center;
 
 	& a{
@@ -87,8 +86,7 @@ p {
 
 .wrapper {
 	display: grid;
-	grid-gap: 20px;
-	grid-template-rows: 1fr 8fr 1fr;
+	grid-template-rows: 2.5fr 8fr 0.5fr;
 	grid-template-areas:
 		"header"
 		"content"
